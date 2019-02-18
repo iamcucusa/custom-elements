@@ -17,8 +17,10 @@ import {createCustomElement} from '@angular/elements';
 export class AppModule {
 
   constructor(private injector: Injector) {
-    const customComponent = createCustomElement(AppComponent, {injector});
+  }
+
+  ngDoBootstrap() {
+    const customComponent = createCustomElement(AppComponent, {injector : this.injector});
     customElements.define('zoom-button', customComponent);
   }
-  ngDoBootstrap() {}
 }

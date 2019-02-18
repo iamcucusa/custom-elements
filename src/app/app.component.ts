@@ -4,7 +4,7 @@ import {ChangeDetectorRef, Component, EventEmitter, Input, Output, ViewEncapsula
   selector: 'zoom-button',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
-  encapsulation: ViewEncapsulation.ShadowDom
+  encapsulation: ViewEncapsulation.Native
 })
 export class AppComponent {
 
