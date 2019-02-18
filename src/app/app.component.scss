@@ -1,0 +1,86 @@
+@import '~@zoomui/basics/src/lib/sass/common';
+
+
+.zoom-button {
+  @include loader;
+
+  background-color: $color-highlight;
+  border: 1px solid $color-highlight-dark;
+  border-radius: 2px;
+  color: $color-white;
+  font-family: $font-main;
+  font-weight: $font-medium;
+  font-size: ms(0);
+  height: sp(5);
+  margin-right: sp(1);
+  min-width: 100px;
+  padding: 0 sp(3);
+  overflow: hidden;
+  position: relative;
+  transition: .2s ease-in-out;
+
+  span{
+    display: inline-block
+  }
+  span::first-letter{
+    text-transform: uppercase;
+  }
+  &.secondary {
+    background-color: $color-light-gray;
+    border: 1px solid $color-platinum;
+    color: $color-highlight;
+
+    &:hover {
+      background-color: $color-platinum;
+    }
+
+    &.zoom-button--is-active {
+      background-color: $color-platinum;
+      color: $color-stone;
+    }
+
+    &.zoom-button--is-loading {
+      @include loader--active($color-silver, $color-stone);
+    }
+  }
+
+  &--medium {
+    height: sp(4);
+    min-width: 84px;
+    padding-left: sp(2);
+    padding-right: sp(2);
+  }
+
+  &--small {
+    height: sp(3);
+    min-width: 68px;
+    padding-left: sp(1);
+    padding-right: sp(1);
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:disabled {
+    background-color: $color-light-gray;
+    border: none;
+    color: $color-stone;
+    pointer-events: none;
+  }
+
+  &:hover {
+    background-color: $color-highlight-dark;
+    cursor: pointer;
+  }
+
+  &--is-active {
+    color: $color-highlight-vivid;
+    background-color: $color-highlight;
+    pointer-events: none;
+  }
+
+  &--is-loading {
+    @include loader--active($color-highlight-vivid, $color-highlight-light);
+  }
+}
