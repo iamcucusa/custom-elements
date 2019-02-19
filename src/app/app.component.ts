@@ -1,10 +1,9 @@
-import {ChangeDetectorRef, Component, EventEmitter, Input, Output, ViewEncapsulation} from '@angular/core';
+import {ChangeDetectorRef, Component, EventEmitter, Input, Output} from '@angular/core';
 
 @Component({
   selector: 'zoom-button',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss'],
-  encapsulation: ViewEncapsulation.Native
+  styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
 
