@@ -7,7 +7,6 @@ import {ChangeDetectorRef, Component, EventEmitter, Input, Output} from '@angula
 })
 export class AppComponent {
 
-  title = 'Agnostic component example for Zoom design system';
   count: number = 0;
 
   @Input() mode: string;
