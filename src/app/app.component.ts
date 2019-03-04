@@ -7,7 +7,7 @@ import {ChangeDetectorRef, Component, EventEmitter, Input, Output} from '@angula
 })
 export class AppComponent {
 
-  count: number = 0;
+  @Input() text: string;
 
   @Input() mode: string;
 
@@ -45,7 +45,6 @@ export class AppComponent {
   }
 
   onClick() {
-    this.count++;
     this.actionClick.emit(this);
     this.changeDetectorRef.detectChanges();
   }
