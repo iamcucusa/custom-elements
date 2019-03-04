@@ -19,7 +19,7 @@ export class AppComponent {
 
   @Input() isDisabled: boolean;
 
-  @Output() actionClick: EventEmitter<number> = new EventEmitter();
+  @Output() actionClick: EventEmitter<AppComponent> = new EventEmitter();
 
   isLoading = false;
 
@@ -46,7 +46,7 @@ export class AppComponent {
 
   onClick() {
     this.count++;
-    this.actionClick.emit(this.count);
+    this.actionClick.emit(this);
     this.changeDetectorRef.detectChanges();
   }
 
